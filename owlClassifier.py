@@ -5,6 +5,7 @@ import re
 ONTOLOGY_PATH = "../ophthalmologytelephonetriage.owl"
 PATIENT_CALLS_PATH = "../telephonetriage.csv"
 N = 3
+URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 def main():
     # Load the ontology.
@@ -24,6 +25,7 @@ def main():
 
     #TODO: Basic UI 
     call_id = 0
+    transcript_labels = []
     for transcript in call_transcripts[0:10]: #TODO: Just using first 10 transcripts for now
         # Filter out irrelevant characters.
         transcript_words = re.sub('[,;\.!\?()-:]', '', transcript).split()
@@ -38,6 +40,7 @@ def main():
             words_and_phrases.extend(joined_words)
  
         # Create PatientCall individual representing this transcript. 
+        transcript_labels.append("Transcript" + str(call_id))
         call_individual = onto.PatientCall("Transcript" + str(call_id))
 
         # For each ontology individual mentioned in the transcript, create a 
@@ -62,8 +65,32 @@ def main():
     with onto:
         sync_reasoner()
 
-    #TODO: Create dataframe output format
-    #TODO: If more than one urgency predicted, choose the most urgent label
+    # Aggregate new urgency level classifications in dictionary.
+    urgency_classifications = {}
+    ontology_classes = list(onto.classes())
+    for onto_class in ontology_classes:
+        if onto_class.name in URGENCY_CLASSES:
+            for instance in onto_class.instances():
+                if instance.name not in urgency_classifications:
+                    urgency_classifications[instance.name] = []
+                urgency_classifications[instance.name].append(onto_class.name)
+
+    # Format classification output as dataframe
+    df = pd.DataFrame(columns=['Classification'], index=transcript_labels)
+    for transcript in urgency_classifications:
+        classifications = urgency_classifications[transcript]
+        # If classifed with more than one urgency level, select the most urgent
+        # level.
+        if (len(classifications) > 1):
+            most_urgent_level = 2
+            for c in classifications:
+                urgency_level = c[-1]
+                if (urgency_level < most_urgent_level):
+                    most_urgent_level = urgency_level
+            urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
+        df.loc[transcript] = urgency_classifications[transcript]
+    print(df)
+
 
 if __name__ == "__main__":
     main()
