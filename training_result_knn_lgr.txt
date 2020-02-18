@@ -1,3 +1,5 @@
+# See code diff: https://www.diffchecker.com/zSpPWQPG
+
 neo@neodeb:bmi210$ python3 word2vec_classifier_lgr.py 
 start training...
 done training.
