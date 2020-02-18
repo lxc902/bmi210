@@ -126,7 +126,7 @@ def main():
 	print (new_notes[:5])
 	get_vocab(new_notes)
 	print ("There are {} many 'words' in the notes.".format(len(vocab)))
-	wordorder = sorted(vocab_freq.items(), key=lambda k_v: k_v[1], reverse=False)
-	#print (wordorder)
+	wordorder = sorted(vocab_freq.items(), key=lambda k_v: k_v[1], reverse=True)
+	print (wordorder)
 
 main()
