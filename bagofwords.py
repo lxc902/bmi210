@@ -4,7 +4,9 @@ import csv
 import pandas as pd
 import re
 from collections import defaultdict
-
+from sklearn import svm
+from sklearn.exceptions import ConvergenceWarning
+import warnings
 
 '''
 This is a program to take in a labeled file and train a unigram classifier to
@@ -111,6 +113,9 @@ def get_vocab(notes):
 
 
 def main():
+	warnings.filterwarnings('ignore', category=ConvergenceWarning)
+	train_size = 800
+	
 	allData = read_csv_to_array(data_path)
   
 	## Populate the data arrays
@@ -128,5 +133,60 @@ def main():
 	print ("There are {} many 'words' in the notes.".format(len(vocab)))
 	wordorder = sorted(vocab_freq.items(), key=lambda k_v: k_v[1], reverse=True)
 	print (wordorder)
+	accuracies = []
+	for length in range(25,500,25):
+		embed_vocab = [i[0] for i in wordorder[:length]]
+		note_vecs = tokenize(new_notes, embed_vocab)
+		note_mags = np.array([np.linalg.norm(i) for i in note_vecs])
+		training_data = note_vecs[:train_size]
+		training_labels = allCodes[:train_size]
+		test_data = note_vecs[train_size:]
+		test_labels = allCodes[train_size:]
+
+		clf = svm.LinearSVC()
+		clf.fit(training_data, training_labels)
+		test_results = clf.predict(test_data)
+
+		total_test = 0
+		total_correct = 0
+		for i, result in enumerate(test_results):
+			total_test += 1
+			# print ("Actual: {}, Predicted: {}".format(test_labels[i], result))
+			if test_results[i] == test_labels[i]:
+				total_correct += 1
+		total_accuracy = float(total_correct/total_test)
+		accuracies.append((0, length, total_accuracy))
+		# print ("Total Accuracy with top {} words in vocab: {}".format(len(embed_vocab),total_accuracy))
+
+	for start in range(0,375,25):
+		for size in range (25, 325, 25):
+			embed_vocab = [i[0] for i in wordorder[start:(start+size)]]
+			note_vecs = tokenize(new_notes, embed_vocab)
+			note_mags = np.array([np.linalg.norm(i) for i in note_vecs])
+			training_data = note_vecs[:train_size]
+			training_labels = allCodes[:train_size]
+			test_data = note_vecs[train_size:]
+			test_labels = allCodes[train_size:]
+
+			clf = svm.LinearSVC()
+			clf.fit(training_data, training_labels)
+			test_results = clf.predict(test_data)
+
+			total_test = 0
+			total_correct = 0
+			for i, result in enumerate(test_results):
+				total_test += 1
+				# print ("Actual: {}, Predicted: {}".format(test_labels[i], result))
+				if test_results[i] == test_labels[i]:
+					total_correct += 1
+			total_accuracy = float(total_correct/total_test)
+			end = start + size
+			accuracies.append((start, end, total_accuracy))
+			# print ("Total Accuracy with words from {} to {}: {}".format(start, (start+size),total_accuracy))
+
+	with open('accuracies.csv', 'w') as outfile:
+		print ("Writing Accuracies to file...")
+		outfile.write('\n'.join('{}, {}, {}'.format(x[0],x[1],x[2]) for x in accuracies))
+	print ("Done.")
 
 main()
