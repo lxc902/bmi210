@@ -1,4 +1,8 @@
 GoogleNews-vectors-negative300.bin.gz
+telephonetriage.csv
+telephonetriage_predicted
+*.swp
+*.csv#
 
 # Byte-compiled / optimized / DLL files
 __pycache__/

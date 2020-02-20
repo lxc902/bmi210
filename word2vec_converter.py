@@ -25,7 +25,7 @@ class WVConverter:
     # This takes about *1 min* to load currently.
     # We can optimize this by pre-filtering and store the words we need only.
     self.wv = gensim.models.KeyedVectors.load_word2vec_format(wv_model_file, binary=True)
-    print("word2vec model loaded :)")
+    #print("word2vec model loaded :)")
     self.wv.init_sims(replace=True)
 
   def in_vocab(self, word):
