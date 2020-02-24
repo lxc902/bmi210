@@ -1,17 +1,24 @@
 from owlready2 import *
 import pandas as pd
 import re
+import json
+import os
 
-ONTOLOGY_PATH = "../ophthalmologytelephonetriage3-1.owl"
+# For Parameter Loading
+import sys
+
+ONTOLOGY_PATH = "ophthalmologytelephonetriage3-1.owl"
 SAVED_ONTOLOGY_PATH = "result.owl"
-PATIENT_CALLS_PATH = "../telephonetriage.csv"
+JSON_OUTPUT_PATH = "output.json"
 N = 3
 URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 def main():
     # Load the ontology.
-    onto = get_ontology("file://" + ONTOLOGY_PATH).load()
- 
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
+    filename = os.path.join(fileDir, 'classifier/' + ONTOLOGY_PATH)
+    onto = get_ontology("file://" + filename).load()
+
     # Map the name of each instance in the ontology to its corresponding
     # instance object.
     words_dict = {}
@@ -21,48 +28,42 @@ def main():
             words_dict[(instance.name).lower()] = instance
 
     # Read in the call transcripts.
-    df = pd.read_csv(PATIENT_CALLS_PATH)    
-    call_transcripts = df.iloc[ : , 1]
+    transcript = sys.argv[1]
+    print("transcript param = ", transcript)
+    transcript_label = "PatientTranscript"
 
-    call_id = 0
-    transcript_labels = []
-    for transcript in call_transcripts: 
-        # Filter out irrelevant characters.
-        transcript_words = re.sub('[,;\.!\?()-:]', '', transcript).split()
-        transcript_words = list(map(lambda word: word.lower(), transcript_words))
+    # Filter out irrelevant characters.
+    transcript_words = re.sub('[,;\.!\?()-:]', '', transcript).split()
+    transcript_words = list(map(lambda word: word.lower(), transcript_words))
 
-        # Generate ngrams so we can handle individual names composed of multiple
-        # words joined by underscores. 
-        words_and_phrases = []
-        for n in range(1, N + 1):
-            ngrams = zip(*[transcript_words[i:] for i in range(n)])
-            joined_words = ["_".join(ngram) for ngram in ngrams]
-            words_and_phrases.extend(joined_words)
- 
-        # Create PatientCall individual representing this transcript. 
-        transcript_labels.append("Transcript" + str(call_id))
-        call_individual = onto.PatientCall("Transcript" + str(call_id))
+    # Generate ngrams so we can handle individual names composed of multiple
+    # words joined by underscores.
+    words_and_phrases = []
+    for n in range(1, N + 1):
+        ngrams = zip(*[transcript_words[i:] for i in range(n)])
+        joined_words = ["_".join(ngram) for ngram in ngrams]
+        words_and_phrases.extend(joined_words)
 
-        # For each ontology individual mentioned in the transcript, create a 
-        # "mentions" relationship.
-        call_mentions = []
-        for word in words_and_phrases:
-            if word in words_dict:
-                call_mentions += [words_dict[word]]
-        call_individual.mentions = call_mentions
-        #TODO print(call_individual.name, "mentions:", call_individual.mentions, "\n")
-        call_id = call_id + 1
+    # Create PatientCall individual representing this transcript.
+    call_individual = onto.PatientCall(transcript_label)
+
+    # For each ontology individual mentioned in the transcript, create a
+    # "mentions" relationship.
+    call_mentions = []
+    for word in words_and_phrases:
+        if word in words_dict:
+            call_mentions += [words_dict[word]]
+            call_individual.mentions = call_mentions
 
     # Synchronize the reasoner to perform classification.
     #
     # Example output:
     # ---------------
-    # * Owlready * Reparenting ophthalmologytelephonetriage.Transcript7: 
+    # * Owlready * Reparenting ophthalmologytelephonetriage.Transcript7:
     #              {ophthalmologytelephonetriage.PatientCall} => {ophthalmologytelephonetriage.NonUrgent2}
-    # * Owlready * Reparenting ophthalmologytelephonetriage.Transcript8: 
+    # * Owlready * Reparenting ophthalmologytelephonetriage.Transcript8:
     #              {ophthalmologytelephonetriage.PatientCall} => {ophthalmologytelephonetriage.Urgent0}
     #
-    onto.save(file = SAVED_ONTOLOGY_PATH)
     with onto:
         sync_reasoner()
 
@@ -72,25 +73,42 @@ def main():
     for onto_class in ontology_classes:
         if onto_class.name in URGENCY_CLASSES:
             for instance in onto_class.instances():
+                print("examining:", instance.name)
                 if instance.name not in urgency_classifications:
                     urgency_classifications[instance.name] = []
                 urgency_classifications[instance.name].append(onto_class.name)
 
     # Format classification output as dataframe
-    df = pd.DataFrame(columns=['Classification'], index=transcript_labels)
-    for transcript in urgency_classifications:
-        classifications = urgency_classifications[transcript]
-        # If classifed with more than one urgency level, select the most urgent
-        # level.
-        if (len(classifications) > 1):
-            most_urgent_level = 2
-            for c in classifications:
-                urgency_level = int(c[-1])
-                if (urgency_level < most_urgent_level):
-                    most_urgent_level = urgency_level
-            urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
-        df.loc[transcript] = urgency_classifications[transcript]
-    print(df)
+    # df = pd.DataFrame(columns=['Classification'], index=transcript_labels)
+    # for transcript in urgency_classifications:
+    #     classifications = urgency_classifications[transcript]
+    #     # If classifed with more than one urgency level, select the most urgent
+    #     # level.
+    #     if (len(classifications) > 1):
+    #         most_urgent_level = 2
+    #         for c in classifications:
+    #             urgency_level = int(c[-1])
+    #             if (urgency_level < most_urgent_level):
+    #                 most_urgent_level = urgency_level
+    #         urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
+    #     df.loc[transcript] = urgency_classifications[transcript]
+    # print(df)
+
+    if (transcript_label not in urgency_classifications):
+        # Transcript did not get classified.
+        writeClassificationToJsonFile("Unclassified")
+    else:
+        writeClassificationToJsonFile(urgency_classifications[transcript_label])
+
+
+def writeClassificationToJsonFile(classification):
+    fileDir = os.path.dirname(os.path.realpath('__file__'))
+    filename = os.path.join(fileDir, 'classifier/' + JSON_OUTPUT_PATH)
+    outFile = open(filename, "w")
+    outputJSON = json.loads("{}")
+    outputJSON["classification"] = classification
+    outFile.write(json.dumps(outputJSON, indent=2, sort_keys=True, ensure_ascii=True))
+    outFile.close()
 
 
 if __name__ == "__main__":

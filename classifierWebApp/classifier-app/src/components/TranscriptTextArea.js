@@ -5,20 +5,18 @@ import Button from '@material-ui/core/Button';
 import ServerUtil from '../server/ServerUtil';
 
 class TranscriptTextArea extends Component {
-  // Stores current value of the transcript text entered in the text area.
-  transcriptText = "";
 
   render() {
     return (
       <div id="inputArea">
         <TextField
            label="Type in your patient notes here."
+           inputRef={ref => {this.inputRef = ref; }}
            multiline
            rows="10"
            size="medium"
            fullWidth
            variant="outlined"
-           onChange={(event) => { this.setTranscriptText(event.target.value); }}
          />
         <div id="submitButtonDiv">
           <Button
@@ -35,7 +33,13 @@ class TranscriptTextArea extends Component {
   // Sends the transcript text currently entered in the text are to the server
   // for classification.
   async classifyPatientTranscript() {
-    let transcript = this.transcriptText;
+    var transcript = this.inputRef.value;
+
+    // Remove special characters so they doesn't interfere with interpretation of
+    // query params
+    transcript = transcript.replace('#', '');
+    transcript = transcript.replace('?', '');
+
     console.log("Clicked button, submitting transcript: " + transcript);
     try {
       ServerUtil.classifyPatientTranscript(transcript)
@@ -47,17 +51,13 @@ class TranscriptTextArea extends Component {
               return response.json();
       })
       .then((responseJson) => {
+        console.log("Response from server: " + JSON.stringify(responseJson));
         let classification = responseJson.classification;
-        console.log('Server classification: ' + JSON.stringify(classification));
+        console.log('Server classification: ' + classification);
       });
     } catch (e) {
       console.log("Error: Unable to classify transcript.");
     }
-  }
-
-  // Updates the value of the transcript text.
-  setTranscriptText(newValue) {
-    this.transcriptText = newValue;
   }
 }
 
