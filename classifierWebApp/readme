@@ -1,0 +1,12 @@
+To start the local server, do the following:
+    1) cd into the "server" directory
+    2) type "node app.js"
+
+To start the client-side app, type the following:
+    1) "cd classifier-app"
+    2) "npm start"
+
+To get it to work, you may need to do the following installations:
+    1) yarn add @material-ui/core
+    2) yarn add react-bootstrap
+    3) npm install react-scripts@1.1.1
