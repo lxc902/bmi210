@@ -9,3 +9,17 @@
   justify-content: flex-end;
   margin-top: 10px;
 }
+
+.classificationText {
+  display: none;
+  padding-top: 20px;
+}
+
+#classificationLoading {
+  display: none;
+  padding-top: 30px;
+}
+
+#explanationText {
+  padding-bottom: 50px;
+}

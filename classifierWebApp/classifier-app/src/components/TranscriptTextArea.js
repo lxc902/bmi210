@@ -1,8 +1,11 @@
 import React, { Component } from 'react';
 import TextField from '@material-ui/core/TextField';
-import '../styles/TranscriptTextArea.css';
 import Button from '@material-ui/core/Button';
+import LinearProgress from '@material-ui/core/LinearProgress';
+import Typography from '@material-ui/core/Typography';
 import ServerUtil from '../server/ServerUtil';
+import '../styles/TranscriptTextArea.css';
+
 
 class TranscriptTextArea extends Component {
 
@@ -26,6 +29,30 @@ class TranscriptTextArea extends Component {
             Submit
           </Button>
         </div>
+        <div id="classificationLoading">
+          <LinearProgress />
+        </div>
+        <Typography
+          id="classificationResultText"
+          variant="h2"
+          className="classificationText">
+          This is where the classification will appear.
+          This text will be set in classifyPatientTranscript()
+        </Typography>
+        <Typography
+          id="explanationTitleText"
+          variant="h5"
+          className="classificationText">
+          This is where the explanation title will appear.
+          This text will be set in classifyPatientTranscript().
+        </Typography>
+        <Typography
+          id="explanationText"
+          variant="h6"
+          className="classificationText">
+          This is where the explanation will appear.
+          This text will be set in classifyPatientTranscript().
+        </Typography>
       </div>
     );
   }
@@ -33,6 +60,20 @@ class TranscriptTextArea extends Component {
   // Sends the transcript text currently entered in the text are to the server
   // for classification.
   async classifyPatientTranscript() {
+    // Hide leftover classifications
+    let classificationResultText = document.getElementById("classificationResultText");
+    classificationResultText.style.display = "none";
+
+    // Hide leftover classification explanations
+    let explanationText = document.getElementById("explanationText");
+    explanationText.style.display = "none";
+    let explanationTitleText = document.getElementById("explanationTitleText");
+    explanationTitleText.style.display = "none";
+
+    // Display loading bar
+    let loadingBar = document.getElementById("classificationLoading");
+    loadingBar.style.display = "block";
+
     var transcript = this.inputRef.value;
 
     // Remove special characters so they doesn't interfere with interpretation of
@@ -53,7 +94,28 @@ class TranscriptTextArea extends Component {
       .then((responseJson) => {
         console.log("Response from server: " + JSON.stringify(responseJson));
         let classification = responseJson.classification;
+        let keywords = responseJson.keywords; // Keywords used to make the classification
         console.log('Server classification: ' + classification);
+        console.log('Keywords used to make classification: ' + keywords);
+
+        // Hide loading bar
+        loadingBar.style.display = "none";
+
+        // Display result on the UI
+        classificationResultText.innerHTML = "Result: " + classification;
+        classificationResultText.style.display = "block";
+
+        // Display explanation for classification
+        let wordsToHighlight = keywords;
+        for (var i = 0; i < wordsToHighlight.length; i++) {
+          let word = wordsToHighlight[i];
+          let highlightedWord = "<span style='color: #ec102e'>" + word + "</span>";
+          transcript = transcript.replace(new RegExp(word, 'gi'), highlightedWord);
+        }
+        explanationTitleText.innerHTML = "<span style='color: #ec102e'>Keywords used to make this classification are highlighted below in red:</span>"
+        explanationTitleText.style.display = "block";
+        explanationText.innerHTML = transcript;
+        explanationText.style.display = "block";
       });
     } catch (e) {
       console.log("Error: Unable to classify transcript.");

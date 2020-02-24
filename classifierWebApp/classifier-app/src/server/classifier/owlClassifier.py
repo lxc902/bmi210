@@ -49,11 +49,13 @@ def main():
 
     # For each ontology individual mentioned in the transcript, create a
     # "mentions" relationship.
-    call_mentions = []
+    call_mentions_individuals = []
+    call_mentions_keywords = [] # Names of individuals mentioned
     for word in words_and_phrases:
         if word in words_dict:
-            call_mentions += [words_dict[word]]
-            call_individual.mentions = call_mentions
+            call_mentions_individuals += [words_dict[word]]
+            call_mentions_keywords += [word]
+    call_individual.mentions = call_mentions_individuals
 
     # Synchronize the reasoner to perform classification.
     #
@@ -80,33 +82,34 @@ def main():
 
     # Format classification output as dataframe
     # df = pd.DataFrame(columns=['Classification'], index=transcript_labels)
-    # for transcript in urgency_classifications:
-    #     classifications = urgency_classifications[transcript]
-    #     # If classifed with more than one urgency level, select the most urgent
-    #     # level.
-    #     if (len(classifications) > 1):
-    #         most_urgent_level = 2
-    #         for c in classifications:
-    #             urgency_level = int(c[-1])
-    #             if (urgency_level < most_urgent_level):
-    #                 most_urgent_level = urgency_level
-    #         urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
-    #     df.loc[transcript] = urgency_classifications[transcript]
+    for transcript in urgency_classifications:
+        classifications = urgency_classifications[transcript]
+        # If classifed with more than one urgency level, select the most urgent
+        # level.
+        if (len(classifications) > 1):
+            most_urgent_level = 2
+            for c in classifications:
+                urgency_level = int(c[-1])
+                if (urgency_level < most_urgent_level):
+                    most_urgent_level = urgency_level
+            urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
+    # df.loc[transcript] = urgency_classifications[transcript]
     # print(df)
 
     if (transcript_label not in urgency_classifications):
         # Transcript did not get classified.
-        writeClassificationToJsonFile("Unclassified")
+        writeClassificationToJsonFile("Unclassified", call_mentions_keywords)
     else:
-        writeClassificationToJsonFile(urgency_classifications[transcript_label])
+        writeClassificationToJsonFile(urgency_classifications[transcript_label], call_mentions_keywords)
 
 
-def writeClassificationToJsonFile(classification):
+def writeClassificationToJsonFile(classification, keywords):
     fileDir = os.path.dirname(os.path.realpath('__file__'))
     filename = os.path.join(fileDir, 'classifier/' + JSON_OUTPUT_PATH)
     outFile = open(filename, "w")
     outputJSON = json.loads("{}")
     outputJSON["classification"] = classification
+    outputJSON["keywords"] = keywords
     outFile.write(json.dumps(outputJSON, indent=2, sort_keys=True, ensure_ascii=True))
     outFile.close()
 
