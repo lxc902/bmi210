@@ -1,0 +1,1231 @@
+<?xml version="1.0"?>
+<Ontology xmlns="http://www.w3.org/2002/07/owl#"
+     xml:base="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     ontologyIRI="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage"
+     versionIRI="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage/3.1">
+    <Prefix name="" IRI="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage"/>
+    <Prefix name="owl" IRI="http://www.w3.org/2002/07/owl#"/>
+    <Prefix name="rdf" IRI="http://www.w3.org/1999/02/22-rdf-syntax-ns#"/>
+    <Prefix name="xml" IRI="http://www.w3.org/XML/1998/namespace"/>
+    <Prefix name="xsd" IRI="http://www.w3.org/2001/XMLSchema#"/>
+    <Prefix name="rdfs" IRI="http://www.w3.org/2000/01/rdf-schema#"/>
+    <Declaration>
+        <Class IRI="#AllergyDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AllergyToMed"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AlmostOutOfMeds"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#AntibioticDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ArtificialTearDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Bimatoprost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#BlurredVision"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brimonidine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Brinzolamide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangeMedication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangeMedicationInsurance"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangeMedicationPharmacy"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ChangeMedicationSupply"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ClarifyInstructions"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dexamethasone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Difluprednate"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DiscussResults"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Dorzolamide"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Drug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DryEye"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#DryEyeDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#FaxDocuments"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Flashes"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Floaters"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Fluorometholone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#GlaucomaDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ItchyEye"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Ketotifen"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Latanoprost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#MoxifloxacinAbx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Netarsudil"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#NonUrgent2"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Olapatadine"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PainfulEye"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PatientCall"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PatientCharacteristic"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#PolytrimAbx"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Prednisolone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecentAppt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecentInjection"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RecentSurgery"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RedEye"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RefillMedication"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Reschedule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Restasis"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#RetinalDetachmentSymptoms"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Rimexolone"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Schedule"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#ScheduleAppt"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Shadow"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#SteroidDrug"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Swelling"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Symptom"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Tafluprost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Task"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Testing"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Timolol"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Travoprost"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Urgent0"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Urgent1"/>
+    </Declaration>
+    <Declaration>
+        <Class IRI="#Xiidra"/>
+    </Declaration>
+    <Declaration>
+        <ObjectProperty IRI="#mentions"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#allergic"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#allergy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#almost_out"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alphagan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#alternative"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#azopt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#bimatoprost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#blurred"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#blurry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#brimonidine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#brinzolamide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#call_with_results"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#change_pharmacy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#clarif"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#completely_out"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#cyclosporine"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dexamethasone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#discuss_results"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dozolamide"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#dry"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#durezol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#erg"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fax"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#flash"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#floater"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fluorometholone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#fml"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hurt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#hvf"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#injection"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#insurance"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#itchy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#ketotifen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#last_appointment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#last_appt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#latanoprost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lifitegrast"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lightning"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#lumigan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#moxifloxacin"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#mri"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pain"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pataday"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#patanol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#polytrim"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#pred_forte"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prednisolone"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#prior_auth"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#recent_appointment"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#recent_appt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#red"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#refill"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#refresh"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#reschedul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#restasis"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#rhopressa"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#run_out"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#schedul"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#scratchy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#shadow"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#supply"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#surgery"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#swollen"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#systane"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#tafluprost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#timolol"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#travatan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#travoprost"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#trusopt"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#veil"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#visual_field"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#waiting_at_pharmacy"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xalatan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#xiidra"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#zaditor"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#zioptan"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#90_day_supply"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#90day_supply"/>
+    </Declaration>
+    <Declaration>
+        <NamedIndividual IRI="#90-day_supply"/>
+    </Declaration>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#ClarifyInstructions"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RecentAppt"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#DiscussResults"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#Testing"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#ScheduleAppt"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#Testing"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#ChangeMedicationPharmacy"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#ChangeMedicationSupply"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#DryEye"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#ItchyEye"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#FaxDocuments"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#RefillMedication"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <ObjectUnionOf>
+                    <Class IRI="#AllergyDrug"/>
+                    <Class IRI="#ArtificialTearDrug"/>
+                    <Class IRI="#DryEyeDrug"/>
+                </ObjectUnionOf>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#NonUrgent2"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#Reschedule"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent0"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#BlurredVision"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RedEye"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RecentInjection"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RecentSurgery"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent0"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#PainfulEye"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RetinalDetachmentSymptoms"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent1"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectIntersectionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#AlmostOutOfMeds"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#RefillMedication"/>
+                </ObjectSomeValuesFrom>
+            </ObjectIntersectionOf>
+            <ObjectUnionOf>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#AntibioticDrug"/>
+                </ObjectSomeValuesFrom>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#GlaucomaDrug"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent1"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectUnionOf>
+                <Class IRI="#PainfulEye"/>
+                <Class IRI="#Swelling"/>
+                <ObjectSomeValuesFrom>
+                    <ObjectProperty IRI="#mentions"/>
+                    <Class IRI="#BlurredVision"/>
+                </ObjectSomeValuesFrom>
+            </ObjectUnionOf>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent1"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#AllergyToMed"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <EquivalentClasses>
+        <Class IRI="#Urgent1"/>
+        <ObjectIntersectionOf>
+            <Class IRI="#PatientCall"/>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#RefillMedication"/>
+            </ObjectSomeValuesFrom>
+            <ObjectSomeValuesFrom>
+                <ObjectProperty IRI="#mentions"/>
+                <Class IRI="#SteroidDrug"/>
+            </ObjectSomeValuesFrom>
+        </ObjectIntersectionOf>
+    </EquivalentClasses>
+    <SubClassOf>
+        <Class IRI="#AllergyDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AllergyToMed"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AlmostOutOfMeds"/>
+        <Class IRI="#PatientCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#AntibioticDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ArtificialTearDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Bimatoprost"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#BlurredVision"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brimonidine"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Brinzolamide"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangeMedication"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangeMedicationInsurance"/>
+        <Class IRI="#ChangeMedication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangeMedicationPharmacy"/>
+        <Class IRI="#ChangeMedication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ChangeMedicationSupply"/>
+        <Class IRI="#ChangeMedication"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ClarifyInstructions"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dexamethasone"/>
+        <Class IRI="#SteroidDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Difluprednate"/>
+        <Class IRI="#SteroidDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DiscussResults"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Dorzolamide"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DryEye"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#DryEyeDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#FaxDocuments"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Flashes"/>
+        <Class IRI="#RetinalDetachmentSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Floaters"/>
+        <Class IRI="#RetinalDetachmentSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Fluorometholone"/>
+        <Class IRI="#SteroidDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#GlaucomaDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ItchyEye"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Ketotifen"/>
+        <Class IRI="#AllergyDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Latanoprost"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#MoxifloxacinAbx"/>
+        <Class IRI="#AntibioticDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Netarsudil"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#NonUrgent2"/>
+        <Class IRI="#PatientCall"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Olapatadine"/>
+        <Class IRI="#AllergyDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PainfulEye"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#PolytrimAbx"/>
+        <Class IRI="#AntibioticDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Prednisolone"/>
+        <Class IRI="#SteroidDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecentAppt"/>
+        <Class IRI="#PatientCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecentInjection"/>
+        <Class IRI="#PatientCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RecentSurgery"/>
+        <Class IRI="#PatientCharacteristic"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RedEye"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RefillMedication"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Reschedule"/>
+        <Class IRI="#ScheduleAppt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Restasis"/>
+        <Class IRI="#DryEyeDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#RetinalDetachmentSymptoms"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Rimexolone"/>
+        <Class IRI="#SteroidDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Schedule"/>
+        <Class IRI="#ScheduleAppt"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#ScheduleAppt"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Shadow"/>
+        <Class IRI="#RetinalDetachmentSymptoms"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#SteroidDrug"/>
+        <Class IRI="#Drug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Swelling"/>
+        <Class IRI="#Symptom"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Tafluprost"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Testing"/>
+        <Class IRI="#Task"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Timolol"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Travoprost"/>
+        <Class IRI="#GlaucomaDrug"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Urgent0"/>
+        <Class IRI="#PatientCall"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Urgent1"/>
+        <Class IRI="#PatientCall"/>
+    </SubClassOf>
+    <SubClassOf>
+        <Class IRI="#Xiidra"/>
+        <Class IRI="#DryEyeDrug"/>
+    </SubClassOf>
+    <DisjointClasses>
+        <Class IRI="#MoxifloxacinAbx"/>
+        <Class IRI="#PolytrimAbx"/>
+    </DisjointClasses>
+    <ClassAssertion>
+        <Class IRI="#AllergyToMed"/>
+        <NamedIndividual IRI="#allergic"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AllergyToMed"/>
+        <NamedIndividual IRI="#allergy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlmostOutOfMeds"/>
+        <NamedIndividual IRI="#almost_out"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brimonidine"/>
+        <NamedIndividual IRI="#alphagan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedication"/>
+        <NamedIndividual IRI="#alternative"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brinzolamide"/>
+        <NamedIndividual IRI="#azopt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bimatoprost"/>
+        <NamedIndividual IRI="#bimatoprost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BlurredVision"/>
+        <NamedIndividual IRI="#blurred"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#BlurredVision"/>
+        <NamedIndividual IRI="#blurry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brimonidine"/>
+        <NamedIndividual IRI="#brimonidine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Brinzolamide"/>
+        <NamedIndividual IRI="#brinzolamide"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DiscussResults"/>
+        <NamedIndividual IRI="#call_with_results"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationPharmacy"/>
+        <NamedIndividual IRI="#change_pharmacy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ClarifyInstructions"/>
+        <NamedIndividual IRI="#clarif"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlmostOutOfMeds"/>
+        <NamedIndividual IRI="#completely_out"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restasis"/>
+        <NamedIndividual IRI="#cyclosporine"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dexamethasone"/>
+        <NamedIndividual IRI="#dexamethasone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DiscussResults"/>
+        <NamedIndividual IRI="#discuss_results"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dorzolamide"/>
+        <NamedIndividual IRI="#dozolamide"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#DryEye"/>
+        <NamedIndividual IRI="#dry"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Difluprednate"/>
+        <NamedIndividual IRI="#durezol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Testing"/>
+        <NamedIndividual IRI="#erg"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FaxDocuments"/>
+        <NamedIndividual IRI="#fax"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flashes"/>
+        <NamedIndividual IRI="#flash"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Floaters"/>
+        <NamedIndividual IRI="#floater"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fluorometholone"/>
+        <NamedIndividual IRI="#fluorometholone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Fluorometholone"/>
+        <NamedIndividual IRI="#fml"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PainfulEye"/>
+        <NamedIndividual IRI="#hurt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Testing"/>
+        <NamedIndividual IRI="#hvf"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentInjection"/>
+        <NamedIndividual IRI="#injection"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationInsurance"/>
+        <NamedIndividual IRI="#insurance"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ItchyEye"/>
+        <NamedIndividual IRI="#itchy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ketotifen"/>
+        <NamedIndividual IRI="#ketotifen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentAppt"/>
+        <NamedIndividual IRI="#last_appointment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentAppt"/>
+        <NamedIndividual IRI="#last_appt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Latanoprost"/>
+        <NamedIndividual IRI="#latanoprost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Xiidra"/>
+        <NamedIndividual IRI="#lifitegrast"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Flashes"/>
+        <NamedIndividual IRI="#lightning"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Bimatoprost"/>
+        <NamedIndividual IRI="#lumigan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#MoxifloxacinAbx"/>
+        <NamedIndividual IRI="#moxifloxacin"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Testing"/>
+        <NamedIndividual IRI="#mri"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PainfulEye"/>
+        <NamedIndividual IRI="#pain"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olapatadine"/>
+        <NamedIndividual IRI="#pataday"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Olapatadine"/>
+        <NamedIndividual IRI="#patanol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#PolytrimAbx"/>
+        <NamedIndividual IRI="#polytrim"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prednisolone"/>
+        <NamedIndividual IRI="#pred_forte"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Prednisolone"/>
+        <NamedIndividual IRI="#prednisolone"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#FaxDocuments"/>
+        <NamedIndividual IRI="#prior_auth"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentAppt"/>
+        <NamedIndividual IRI="#recent_appointment"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentAppt"/>
+        <NamedIndividual IRI="#recent_appt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RedEye"/>
+        <NamedIndividual IRI="#red"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RefillMedication"/>
+        <NamedIndividual IRI="#refill"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArtificialTearDrug"/>
+        <NamedIndividual IRI="#refresh"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Reschedule"/>
+        <NamedIndividual IRI="#reschedul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Restasis"/>
+        <NamedIndividual IRI="#restasis"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Netarsudil"/>
+        <NamedIndividual IRI="#rhopressa"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlmostOutOfMeds"/>
+        <NamedIndividual IRI="#run_out"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Schedule"/>
+        <NamedIndividual IRI="#schedul"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ItchyEye"/>
+        <NamedIndividual IRI="#scratchy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shadow"/>
+        <NamedIndividual IRI="#shadow"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationSupply"/>
+        <NamedIndividual IRI="#supply"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#RecentSurgery"/>
+        <NamedIndividual IRI="#surgery"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Swelling"/>
+        <NamedIndividual IRI="#swollen"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ArtificialTearDrug"/>
+        <NamedIndividual IRI="#systane"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tafluprost"/>
+        <NamedIndividual IRI="#tafluprost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Timolol"/>
+        <NamedIndividual IRI="#timolol"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Travoprost"/>
+        <NamedIndividual IRI="#travatan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Travoprost"/>
+        <NamedIndividual IRI="#travoprost"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Dorzolamide"/>
+        <NamedIndividual IRI="#trusopt"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Shadow"/>
+        <NamedIndividual IRI="#veil"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Testing"/>
+        <NamedIndividual IRI="#visual_field"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#AlmostOutOfMeds"/>
+        <NamedIndividual IRI="#waiting_at_pharmacy"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Latanoprost"/>
+        <NamedIndividual IRI="#xalatan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Xiidra"/>
+        <NamedIndividual IRI="#xiidra"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Ketotifen"/>
+        <NamedIndividual IRI="#zaditor"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#Tafluprost"/>
+        <NamedIndividual IRI="#zioptan"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationSupply"/>
+        <NamedIndividual IRI="#90_day_supply"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationSupply"/>
+        <NamedIndividual IRI="#90day_supply"/>
+    </ClassAssertion>
+    <ClassAssertion>
+        <Class IRI="#ChangeMedicationSupply"/>
+        <NamedIndividual IRI="#90-day_supply"/>
+    </ClassAssertion>
+    <ObjectPropertyDomain>
+        <ObjectProperty IRI="#mentions"/>
+        <Class IRI="#PatientCall"/>
+    </ObjectPropertyDomain>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#alternative</IRI>
+        <Literal>for example, if someone has an allergy or a drug is too expensive and needs an alternative drug prescribed</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#change_pharmacy</IRI>
+        <Literal>for example, the patient wants his current medication called into a different pharmacy</Literal>
+    </AnnotationAssertion>
+    <AnnotationAssertion>
+        <AnnotationProperty abbreviatedIRI="rdfs:comment"/>
+        <IRI>#supply</IRI>
+        <Literal>for example, to change from 30-day supply to 90-day supply</Literal>
+    </AnnotationAssertion>
+</Ontology>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
