@@ -1,6 +1,6 @@
 GoogleNews-vectors-negative300.bin.gz
 telephonetriage.csv
-telephonetriage_predicted
+telephonetriage_predicted*
 *.swp
 *.csv#
 
