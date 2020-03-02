@@ -1,33 +1,39 @@
 var express = require('express');
 var router = express.Router();
-var path = require('path');
-var { PythonShell } = require('python-shell');
+
+let runNaiveOntologyClassifier = require('./classifierRouterHelperModules/runNaiveOntology.js');
+let runSVMClassifier = require('./classifierRouterHelperModules/runSupportVectorMachine.js');
+let runGNBClassifier = require('./classifierRouterHelperModules/runGaussianNaiveBayes.js');
+let runLogisticRegressionClassifier = require('./classifierRouterHelperModules/runWord2VecLogisticRegression.js');
+let runKNNClassifier = require('./classifierRouterHelperModules/runWord2VecKNN.js');
+let constants = require('../classifierConstants.js');
 
 router.get('/classifer', async (req, res) => {
   let transcript = req.query.transcript;
+  let selectedClassifier = req.query.selectedClassifier;
 
   if (transcript === "") {
     return res.status(400).json({ error: 'Transcript empty' });
   }
-  console.log('Server received transcript:' + transcript);
-
-  // Runs classifier in a Python shell
-  let options = {
-     pythonOptions: ['-u'], // get print results in real-time
-     pythonPath: 'python3',
-     scriptPath: path.resolve('.') + '/classifier',
-     args: [transcript]
-  };
-
-  PythonShell.run('owlClassifier.py', options, function (err, results) {
-     if (err) throw err;
-     console.log("Results: " + results);
-
-     delete require.cache[require.resolve('./classifier/output.json')];
-     let classificationJSON = require('./classifier/output.json');
-     console.log("Classification: " + JSON.stringify(classificationJSON))
-     res.status(200).json(classificationJSON);
-  });
+  console.log('Server received transcript: ' + transcript);
+  console.log('Server will use classifier: ' + selectedClassifier);
+  switch (selectedClassifier) {
+    case global.NAIVE_ONTOLOGY:
+      runNaiveOntologyClassifier(transcript, res);
+      break;
+    case global.SUPPORT_VECTOR_MACHINE:
+      runSVMClassifier(transcript, res);
+      break;
+    case global.GAUSSIAN_NAIVE_BAYES:
+      runGNBClassifier(transcript, res);
+      break;
+    case global.LOGISTIC_REGRESSION:
+      runLogisticRegressionClassifier(transcript, res);
+      break;
+    case global.KNN:
+      runKNNClassifier(transcript, res);
+      break;
+  }
 });
 
 module.exports = router;

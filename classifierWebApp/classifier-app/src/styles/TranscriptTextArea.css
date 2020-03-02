@@ -4,6 +4,10 @@
   padding-top: 50px;
 }
 
+#classifierSelection {
+  margin-bottom: 20px;
+}
+
 #submitButtonDiv {
   display: flex;
   justify-content: flex-end;
@@ -18,6 +22,7 @@
 #classificationLoading {
   display: none;
   padding-top: 30px;
+  padding-bottom: 30px;
 }
 
 #explanationText {

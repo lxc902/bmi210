@@ -3,15 +3,34 @@ import TextField from '@material-ui/core/TextField';
 import Button from '@material-ui/core/Button';
 import LinearProgress from '@material-ui/core/LinearProgress';
 import Typography from '@material-ui/core/Typography';
+import Radio from '@material-ui/core/Radio';
+import RadioGroup from '@material-ui/core/RadioGroup';
+import FormControlLabel from '@material-ui/core/FormControlLabel';
+import FormLabel from '@material-ui/core/FormLabel';
 import ServerUtil from '../server/ServerUtil';
 import '../styles/TranscriptTextArea.css';
-
+import * as constants from '../classifierConstants.js';
 
 class TranscriptTextArea extends Component {
+
+  state = { selectedClassifier: "ontology" };
+  handleChange = event => {
+    this.setState({ selectedClassifier: event.target.value });
+  };
 
   render() {
     return (
       <div id="inputArea">
+        <div id="classifierSelection">
+          <FormLabel component="legend">Please select the classifier you would like to use:</FormLabel>
+          <RadioGroup value={this.state.selectedClassifier} name="classifierGroup" onChange={this.handleChange}>
+            <FormControlLabel value={global.NAIVE_ONTOLOGY} control={<Radio />} label="Naive OWL Ontology" />
+            <FormControlLabel value={global.SUPPORT_VECTOR_MACHINE} control={<Radio />} label="Support Vector Machine" />
+            <FormControlLabel value={global.GAUSSIAN_NAIVE_BAYES} control={<Radio />} label="Gaussian Naive Bayes" />
+            <FormControlLabel value={global.LOGISTIC_REGRESSION} control={<Radio />} label="word2vec + Logistic Regression" />
+            <FormControlLabel value={global.KNN} control={<Radio />} label="word2vec + KNN" />
+          </RadioGroup>
+        </div>
         <TextField
            label="Type in your patient notes here."
            inputRef={ref => {this.inputRef = ref; }}
@@ -60,6 +79,9 @@ class TranscriptTextArea extends Component {
   // Sends the transcript text currently entered in the text are to the server
   // for classification.
   async classifyPatientTranscript() {
+    var transcript = this.inputRef.value;
+    if (transcript === "") return;
+
     // Hide leftover classifications
     let classificationResultText = document.getElementById("classificationResultText");
     classificationResultText.style.display = "none";
@@ -74,16 +96,18 @@ class TranscriptTextArea extends Component {
     let loadingBar = document.getElementById("classificationLoading");
     loadingBar.style.display = "block";
 
-    var transcript = this.inputRef.value;
-
     // Remove special characters so they doesn't interfere with interpretation of
     // query params
     transcript = transcript.replace('#', '');
     transcript = transcript.replace('?', '');
 
     console.log("Clicked button, submitting transcript: " + transcript);
+
+    let selectedClassifier = this.state.selectedClassifier;
+    console.log("Will use classifier: " + selectedClassifier);
+
     try {
-      ServerUtil.classifyPatientTranscript(transcript)
+      ServerUtil.classifyPatientTranscript(transcript, selectedClassifier)
       .then((response) => {
               if (response.ok === false) {
                 console.log('Unable to classify transcript with the server.');

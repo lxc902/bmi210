@@ -3,8 +3,8 @@ const serverURL = 'http://localhost:3000';
 class ServerUtil {
 
   // Makes an HTTP GET request for the transcript classification.
-  static classifyPatientTranscript(transcript) {
-    let url = serverURL + "/classifer?transcript=" + transcript;
+  static classifyPatientTranscript(transcript, selectedClassifier) {
+    let url = serverURL + "/classifer?transcript=" + transcript + "&selectedClassifier=" + selectedClassifier;
     console.log("url: " + url);
     return fetch(url, {
       method: 'get',

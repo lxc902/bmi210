@@ -16,7 +16,7 @@ URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 def main():
     # Load the ontology.
     fileDir = os.path.dirname(os.path.realpath('__file__'))
-    filename = os.path.join(fileDir, 'classifier/' + ONTOLOGY_PATH)
+    filename = os.path.join(fileDir, 'classifierPythonScripts/' + ONTOLOGY_PATH)
     onto = get_ontology("file://" + filename).load()
 
     # Map the name of each instance in the ontology to its corresponding
@@ -80,8 +80,6 @@ def main():
                     urgency_classifications[instance.name] = []
                 urgency_classifications[instance.name].append(onto_class.name)
 
-    # Format classification output as dataframe
-    # df = pd.DataFrame(columns=['Classification'], index=transcript_labels)
     for transcript in urgency_classifications:
         classifications = urgency_classifications[transcript]
         # If classifed with more than one urgency level, select the most urgent
@@ -93,8 +91,6 @@ def main():
                 if (urgency_level < most_urgent_level):
                     most_urgent_level = urgency_level
             urgency_classifications[transcript] = [URGENCY_CLASSES[most_urgent_level]]
-    # df.loc[transcript] = urgency_classifications[transcript]
-    # print(df)
 
     if (transcript_label not in urgency_classifications):
         # Transcript did not get classified.
@@ -105,7 +101,7 @@ def main():
 
 def writeClassificationToJsonFile(classification, keywords):
     fileDir = os.path.dirname(os.path.realpath('__file__'))
-    filename = os.path.join(fileDir, 'classifier/' + JSON_OUTPUT_PATH)
+    filename = os.path.join(fileDir, 'classifierPythonScripts/' + JSON_OUTPUT_PATH)
     outFile = open(filename, "w")
     outputJSON = json.loads("{}")
     outputJSON["classification"] = classification
