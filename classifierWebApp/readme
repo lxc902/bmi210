@@ -12,3 +12,26 @@ To get it to work, you may need to do the following installations:
     3) npm install react-scripts@1.1.1
     4) npm install python-shell
     5) npm install typeface-roboto --save
+
+
+----------------------------------------------------------------------------
+
+For Isaac and Xingchen, to integrate your python classifiers with the web app,
+you can do the following:
+
+1) Navigate to the directory classifier-app/src/server
+2) Copy your Python script into the folder classifierPythonScripts
+3) Modify your Python script to write its output (classification and keywords
+   used to make the classification) to the file, output.json. To do this,
+   you should be able to reuse the writeClassificationToJsonFile() function at
+   the bottom of owlClassifier.py.
+4) Navigate to the directory server/classifierRouterHelperModules. In this directory,
+   you should see a file corresponding to the classifier you are integrating.
+5) Modify the content of this file in the following ways:
+    a) If needed, change "args" so that it reflects the arguments passed into your classifier
+       (right now it passes in the transcript text, so if that's all you need,
+        you shouldn't need to change args).
+    b) In the PythonShell.run() command, change the name of the classifier script
+       to be run (it's currently set as "owlClassifier.py", but you should change
+       it to the name of your Python classifier file).
+  
