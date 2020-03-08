@@ -24,7 +24,7 @@ def main():
   predicteds = predicteds[0]
   key_scores = key_scores[0]
 
-  key_scores = [x for x in key_scores if x[1]>0.5]
+  # HighlightShow top 10 words onlh
   key_scores = key_scores[:10]
 
   keys, scores = zip(*key_scores)

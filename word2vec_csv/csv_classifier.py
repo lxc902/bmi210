@@ -36,9 +36,9 @@ def main():
   ]
   for mod_name, mod_cls in mods:
     model = mod_cls()
-    print('start training...')
+    print('start training...', end='', flush=True)
     model.fit(train_x, train_y)
-    print('done training.')
+    print('done')
     predicteds, keys = model.predict(test_x)
     #report(test_y, predicteds)
     #print(keys[0])

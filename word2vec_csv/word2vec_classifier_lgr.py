@@ -54,6 +54,7 @@ class WVModelLGR:
           # print(prob)
           # sys.exit(0)
       words.sort(key=lambda x:-x[1])
+      words = [x for x in words if x[1]>0.5] # Filter out low prob
       keys.append(words)
 
     return preds, keys
