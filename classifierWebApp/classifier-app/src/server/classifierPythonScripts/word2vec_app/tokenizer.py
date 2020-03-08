@@ -101,7 +101,7 @@ def trim_word(word):
 
 # Current file's dir
 import pathlib
-whitelisted_path = str(pathlib.Path(__file__).parent.absolute()) + '/tokenizer_whitelisted_words.txt'
+whitelisted_path = str(pathlib.Path(__file__).parent.absolute()) + '/obj/tokenizer_whitelisted_words.txt'
 whitelisted_words = set()
 whitelisted_words_loaded = False
 def load_whitelisted_words():
