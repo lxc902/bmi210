@@ -1,3 +1,4 @@
+node_modules/
 .DS_Store
 GoogleNews-vectors-negative300.bin.gz
 telephonetriage.csv
