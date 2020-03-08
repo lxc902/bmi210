@@ -29,6 +29,7 @@ class TranscriptTextArea extends Component {
             <FormControlLabel value={global.GAUSSIAN_NAIVE_BAYES} control={<Radio />} label="Gaussian Naive Bayes" />
             <FormControlLabel value={global.LOGISTIC_REGRESSION} control={<Radio />} label="word2vec + Logistic Regression" />
             <FormControlLabel value={global.KNN} control={<Radio />} label="word2vec + KNN" />
+            <FormControlLabel value={global.W2V_SVM} control={<Radio />} label="word2vec + SVM" />
           </RadioGroup>
         </div>
         <TextField

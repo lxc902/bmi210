@@ -9,7 +9,7 @@ module.exports = function(transcript, res) {
      pythonOptions: ['-u'], // get print results in real-time
      pythonPath: 'python3',
      scriptPath: path.resolve('.') + '/classifierPythonScripts/word2vec_app',
-     args: [transcript, 'knn']
+     args: [transcript, 'svm']
   };
 
   PythonShell.run('classifier.py', options, function (err, results) {
