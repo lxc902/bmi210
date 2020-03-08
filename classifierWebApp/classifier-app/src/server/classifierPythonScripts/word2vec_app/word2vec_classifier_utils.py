@@ -4,9 +4,14 @@ import sys
 import os
 from itertools import islice
 import numpy as np
-from word2vec_cache import load_cache
 from tokenizer import *
 import random
+from saveload import *
+
+# Returns the vocab which is a dict (string => list of floats),
+# meaning word => w2v_vector (300-length float value)
+def load_cache():
+  return load_obj('word2vec_cache')
 
 # word2vec vectors(300-len floats) of words in vocab
 w2v = load_cache()

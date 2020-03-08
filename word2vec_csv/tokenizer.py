@@ -14,10 +14,6 @@ Currently just operates on telephonetriage.csv, which is in the same dir as
   this program
 '''
 
-# Paths
-cur_dir = os.getcwd()
-data_path = cur_dir + '/telephonetriage.csv'
-
 # Data
 training_data = []
 dev_data = []
@@ -96,16 +92,6 @@ def trim_notes(notes):
     new_notes.append(' '.join(new_note))  
   return new_notes
 
-def get_vocab(notes):
-  vocab = set()
-  # build vocab from notes
-  for note in notes:
-    words = note.split(' ')
-    for word in words:
-      if word not in vocab:
-        vocab.add(word)
-  return vocab
-
 def trim_word(word):
   r = ''
   for c in word:
@@ -113,28 +99,54 @@ def trim_word(word):
       r+=c
   return r
 
+# Current file's dir
+import pathlib
+whitelisted_path = str(pathlib.Path(__file__).parent.absolute()) + '/tokenizer_whitelisted_words.txt'
+whitelisted_words = set()
+whitelisted_words_loaded = False
+def load_whitelisted_words():
+  global whitelisted_words
+  global whitelisted_words_loaded
+  try:
+    with open(whitelisted_path) as f:
+      for w in f:
+        whitelisted_words.add(w.split()[0])
+      whitelisted_words_loaded = True
+  except e:
+    print('skip loading whitelist: ', e)
+    whitelisted_words_loaded = False
+
+load_whitelisted_words()
+#print(whitelisted_words)
+
+# Returns a set of words in a list of notes
+def tokenize_list(notes, weights=False):
+  if not weights: # just vocab
+    vocab = set()
+  else:
+    vocab = dict()
+  notes = trim_notes(notes)
+  for note in notes:
+    # build vocab for note
+    words = note.split(' ')
+    for word in words:
+      w = trim_word(word)
+      if not w:  # remove ''
+        continue
+      if whitelisted_words_loaded and w not in whitelisted_words:
+        continue # remove skipped
+      if not weights:
+        if w not in vocab:
+          vocab.add(w)
+      else:
+        if w not in vocab:
+          vocab[w] = 1
+        else:
+          vocab[w] += 1
+  return vocab
+
 # Returns a set of words in a note
-# TODO: add weights to returned vocab
-def tokenize(note):
-  new_note = trim_notes([note])[0]
-  v = get_vocab([new_note])
-  v = [trim_word(w) for w in v]
-  return set([w for w in v if w]) # remove ''
+def tokenize(note, weights=False):
+  return tokenize_list([note], weights)
 
-def main():
-  allData = read_csv_to_array(data_path)
-  
-  ## Populate the data arrays
-  ''' 
-  telephonetriage.csv is formatted with the following columns:
-  note_deid, notelower, labeled (1 for all notes), label
-  '''
-  allNotes = allData['notelower'].tolist()
-
-  for note in allNotes:
-    print(tokenize(note))
-    break
-
-if __name__ == "__main__":
-  main()
 

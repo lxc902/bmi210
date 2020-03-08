@@ -17,7 +17,8 @@ def evalstats(df):
     print("Confusion Matrix:")
     print(pd.crosstab(df["predicted"], df["label"]))
     cm=np.array(pd.crosstab(df["predicted"], df["label"]))
-    print("Accuracy:", round((cm[0,0]+cm[1,1]+cm[2,2])/cm.sum(),3))
+    print("+++++ Accuracy:", round((cm[0,0]+cm[1,1]+cm[2,2])/cm.sum(),3))
+    return
     
     print("**********Stats for 0 label vs 1/2*********")
     Recall=cm[0,0]/cm[:,0].sum()
