@@ -143,7 +143,7 @@ def main():
 			used_words.append(vocab[i])
 	print ("Words used: {}".format(used_words))
 	# Write JSON file
-	writeClassificationToJsonFile(URGENCY_CLASSES[rating], used_words)
+	writeClassificationToJsonFile([URGENCY_CLASSES[rating]], used_words)
 
 
 main()
