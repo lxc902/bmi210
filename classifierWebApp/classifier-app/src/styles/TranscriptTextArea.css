@@ -4,6 +4,10 @@
   padding-top: 50px;
 }
 
+#welcomeText {
+  margin-bottom: 30px;
+}
+
 #classifierSelection {
   margin-bottom: 20px;
 }
@@ -12,6 +16,7 @@
   display: flex;
   justify-content: flex-end;
   margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .classificationText {

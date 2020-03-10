@@ -21,6 +21,12 @@ class TranscriptTextArea extends Component {
   render() {
     return (
       <div id="inputArea">
+        <Typography
+          id="welcomeText"
+          variant="h4"
+          className="welcomeText">
+          Use this tool to examine how each of our classifiers interprets patient call transcripts!
+        </Typography>
         <div id="classifierSelection">
           <FormLabel component="legend">Please select the classifier you would like to use:</FormLabel>
           <RadioGroup value={this.state.selectedClassifier} name="classifierGroup" onChange={this.handleChange}>
@@ -118,7 +124,7 @@ class TranscriptTextArea extends Component {
       })
       .then((responseJson) => {
         console.log("Response from server: " + JSON.stringify(responseJson));
-        let classification = responseJson.classification;
+        let classification = (responseJson.classification).toString();
         let keywords = responseJson.keywords; // Keywords used to make the classification
         console.log('Server classification: ' + classification);
         console.log('Keywords used to make classification: ' + keywords);
@@ -126,7 +132,16 @@ class TranscriptTextArea extends Component {
         // Hide loading bar
         loadingBar.style.display = "none";
 
-        // Display result on the UI
+        // Display human-readable result on the UI
+        if (classification.indexOf('0') != -1) {
+          classification = "<b>Urgent</b> (should be addressed ASAP, within 0 days)";
+        } else if (classification.indexOf('1') != -1) {
+          classification = "<b>Semi-Urgent</b> (should ideally be addressed within 1 day)";
+        } else if (classification.indexOf('2') != -1) {
+          classification = "<b>Non-Urgent</b> (can wait to be addressed for 2 or more days)";
+        } else if (classification.indexOf("Unclassified") != -1) {
+          classification = "<b>Unclassifed</b> (could not determine urgency of this transcript)"
+        }
         classificationResultText.innerHTML = "Result: " + classification;
         classificationResultText.style.display = "block";
 
