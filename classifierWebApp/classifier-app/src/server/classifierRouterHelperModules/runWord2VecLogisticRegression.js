@@ -8,16 +8,18 @@ module.exports = function(transcript, res) {
   let options = {
      pythonOptions: ['-u'], // get print results in real-time
      pythonPath: 'python3',
-     scriptPath: path.resolve('.') + '/classifierPythonScripts',
-     args: [transcript]
+     scriptPath: path.resolve('.') + '/classifierPythonScripts/word2vec_app',
+     args: [transcript, 'lgr']
   };
 
-  PythonShell.run('owlClassifier.py', options, function (err, results) {
+  PythonShell.run('classifier.py', options, function (err, results) {
      if (err) throw err;
      console.log(results);
 
-     delete require.cache[require.resolve('../classifierPythonScripts/output.json')];
-     let classificationJSON = require('../classifierPythonScripts/output.json');
+     let dir = '../classifierPythonScripts/word2vec_app';
+
+     delete require.cache[require.resolve(dir+'/output.json')];
+     let classificationJSON = require(dir+'/output.json');
      console.log("Classification: " + JSON.stringify(classificationJSON));
      res.status(200).json(classificationJSON);
   });

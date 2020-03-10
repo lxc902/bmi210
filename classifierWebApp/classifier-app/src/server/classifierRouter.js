@@ -6,6 +6,7 @@ let runSVMClassifier = require('./classifierRouterHelperModules/runSupportVector
 let runGNBClassifier = require('./classifierRouterHelperModules/runGaussianNaiveBayes.js');
 let runLogisticRegressionClassifier = require('./classifierRouterHelperModules/runWord2VecLogisticRegression.js');
 let runKNNClassifier = require('./classifierRouterHelperModules/runWord2VecKNN.js');
+let runW2VSVMClassifier = require('./classifierRouterHelperModules/runWord2VecSVM.js');
 let constants = require('../classifierConstants.js');
 
 router.get('/classifer', async (req, res) => {
@@ -32,6 +33,9 @@ router.get('/classifer', async (req, res) => {
       break;
     case global.KNN:
       runKNNClassifier(transcript, res);
+      break;
+    case global.W2V_SVM:
+      runW2VSVMClassifier(transcript, res);
       break;
   }
 });
