@@ -12,6 +12,7 @@ To get it to work, you may need to do the following installations:
     3) npm install react-scripts@1.1.1
     4) npm install python-shell
     5) npm install typeface-roboto --save
+    6) pip install --upgrade gensim
 
 
 ----------------------------------------------------------------------------

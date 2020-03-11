@@ -2,22 +2,23 @@ from owlready2 import *
 import pandas as pd
 import re
 from projectevalstats import *
-import math 
+import math
 
 ONTOLOGY_PATH = "../ophthalmologytelephonetriage3-1.owl"
 SAVED_ONTOLOGY_PATH = "result.owl"
+OUTPUT_CSV_PATH = "result.csv"
 PATIENT_CALLS_PATH = "../telephonetriage.csv"
 N = 3
 URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 # Boolean constants for how to deal with unclassified transcripts
 SHOULD_SET_NAN_TO_0 = False # set to True to classify unclassified as Urgent0
-SHOULD_SET_NAN_TO_2 = True # set to True to classify unclassified as NonUrgent2
+SHOULD_SET_NAN_TO_2 = False # set to True to classify unclassified as NonUrgent2
 
 def main():
 	# Load the ontology.
 	onto = get_ontology("file://" + ONTOLOGY_PATH).load()
- 
+
 	# Map the name of each instance in the ontology to its corresponding
 	# instance object.
 	words_dict = {}
@@ -27,11 +28,12 @@ def main():
 			words_dict[(instance.name).lower()] = instance
 
 	# Read in the call transcripts.
-	df = pd.read_csv(PATIENT_CALLS_PATH)	
+	df = pd.read_csv(PATIENT_CALLS_PATH)
 	call_transcripts = df.iloc[ : , 1]
 	labels = list(df.iloc[ : , 3])
+	transcript_ids = list(df.iloc[ : , 0])
 
-	call_id = 0
+	call_idx = 0
 	transcript_labels = []
 	for transcript in call_transcripts:
 		# Filter out irrelevant characters.
@@ -39,34 +41,33 @@ def main():
 		transcript_words = list(map(lambda word: word.lower(), transcript_words))
 
 		# Generate ngrams so we can handle individual names composed of multiple
-		# words joined by underscores. 
+		# words joined by underscores.
 		words_and_phrases = []
 		for n in range(1, N + 1):
 			ngrams = zip(*[transcript_words[i:] for i in range(n)])
 			joined_words = ["_".join(ngram) for ngram in ngrams]
 			words_and_phrases.extend(joined_words)
- 
-		# Create PatientCall individual representing this transcript. 
-		transcript_labels.append("Transcript" + str(call_id))
-		call_individual = onto.PatientCall("Transcript" + str(call_id))
 
-		# For each ontology individual mentioned in the transcript, create a 
+		# Create PatientCall individual representing this transcript.
+		transcript_labels.append(str(transcript_ids[call_idx]))
+		call_individual = onto.PatientCall(str(transcript_ids[call_idx]))
+
+		# For each ontology individual mentioned in the transcript, create a
 		# "mentions" relationship.
 		call_mentions = []
 		for word in words_and_phrases:
 			if word in words_dict:
 				call_mentions += [words_dict[word]]
 		call_individual.mentions = call_mentions
-		#TODO print(call_individual.name, "mentions:", call_individual.mentions, "\n")
-		call_id = call_id + 1
+		call_idx = call_idx + 1
 
 	# Synchronize the reasoner to perform classification.
 	#
 	# Example output:
 	# ---------------
-	# * Owlready * Reparenting ophthalmologytelephonetriage.Transcript7: 
+	# * Owlready * Reparenting ophthalmologytelephonetriage.Transcript7:
 	#			   {ophthalmologytelephonetriage.PatientCall} => {ophthalmologytelephonetriage.NonUrgent2}
-	# * Owlready * Reparenting ophthalmologytelephonetriage.Transcript8: 
+	# * Owlready * Reparenting ophthalmologytelephonetriage.Transcript8:
 	#			   {ophthalmologytelephonetriage.PatientCall} => {ophthalmologytelephonetriage.Urgent0}
 	#
 	onto.save(file = SAVED_ONTOLOGY_PATH)
@@ -100,7 +101,7 @@ def main():
 		classification_label = int(urgency_classifications[transcript][0][-1])
 		df.loc[transcript, "predicted"] = classification_label
 
-	# Deal with unclassified transcripts	
+	# Deal with unclassified transcripts
 	predictions = df["predicted"]
 	num_unclassified = 0
 	for value in predictions:
@@ -109,13 +110,16 @@ def main():
 	print("Number of unclassified transcripts = ", num_unclassified)
 
 	if SHOULD_SET_NAN_TO_0:
-		predictions = [0 if math.isnan(x) else x for x in predictions]	
+		predictions = [0 if math.isnan(x) else x for x in predictions]
 		df["predicted"] = predictions
 	elif SHOULD_SET_NAN_TO_2:
 		predictions = [2 if math.isnan(x) else x for x in predictions]
 		df["predicted"] = predictions
 
 	print(df)
+
+	# Write result to csv file
+	df.to_csv(OUTPUT_CSV_PATH, index=True)
 
 	# Compute statistics
 	evalstats(df)
