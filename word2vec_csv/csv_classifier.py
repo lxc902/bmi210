@@ -24,7 +24,7 @@ enable_train = True
 URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 def offline_keywords(true_labels, pred_labels, keylists, mod_name):
   n = len(true_labels)
-  fn = 'offline_keywords_{}.txt'.format(mod_name)
+  fn = 'offline/offline_keywords_{}.txt'.format(mod_name)
   with open(fn, 'w') as f:
     for cls in range(3):
       f.write('-------- class {} ({}) --------\n'.format(cls, URGENCY_CLASSES[cls]))
