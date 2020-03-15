@@ -136,17 +136,17 @@ def writeClassificationToJsonFile(classification, keywords):
 
 def main():
 	transcript = sys.argv[1]
-	print("transcript param = ", transcript)
+	# print("transcript param = ", transcript)
 	trimmed_transcript = trim_notes([transcript])[0]
 	transcript_vec = tokenize_note(trimmed_transcript, vocab)
-	print (transcript_vec)
+	# print (transcript_vec)
 	rating = clf.predict([transcript_vec])[0]
-	print ("Rating is: {}".format(rating))
+	# print ("Rating is: {}".format(rating))
 	used_words = []
 	for i in range(len(transcript_vec)):
 		if transcript_vec[i] != 0:
 			used_words.append(vocab[i])
-	print ("Words used: {}".format(used_words))
+	# print ("Words used: {}".format(used_words))
 	# Write JSON file
 	writeClassificationToJsonFile([URGENCY_CLASSES[0]], used_words)
 

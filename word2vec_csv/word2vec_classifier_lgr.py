@@ -15,7 +15,8 @@ from saveload import *
 class WVModelLGR:
   def __init__(self):
     from sklearn.linear_model import LogisticRegression
-    self.m = LogisticRegression(n_jobs=-1, C=2e1, max_iter=1e6, solver='liblinear')
+    self.m = LogisticRegression(multi_class='auto', C=2e1, max_iter=1e6, solver='liblinear')
+    # n_jobs=-1, 
     # C is good at 1e1, 2e1(best@0.667), 5e1, bad at 1, 1e5
   
   def fit(self, notes, labels):

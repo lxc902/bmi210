@@ -1,5 +1,7 @@
 {
-  "classification": "Urgent0",
+  "classification": [
+    "Urgent0"
+  ],
   "keywords": [
     "itchy",
     "eyes",

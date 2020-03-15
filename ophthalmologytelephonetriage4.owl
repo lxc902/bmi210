@@ -1,0 +1,1772 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage"
+     xml:base="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage">
+        <owl:versionIRI rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage/4"/>
+    </owl:Ontology>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyToMed -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyToMed">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bimatoprost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bimatoprost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brimonidine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brimonidine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brinzolamide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brinzolamide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MedicationRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationInsurance -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationInsurance">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationPharmacy -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationPharmacy">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ClarifyInstructions -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ClarifyInstructions">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dexamethasone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dexamethasone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Difluprednate -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Difluprednate">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DiscussResults -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DiscussResults">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dorzolamide -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dorzolamide">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEyeDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEyeDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Flashes -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Flashes">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Floaters -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Floaters">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Fluorometholone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Fluorometholone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ItchyEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ItchyEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Ketotifen -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Ketotifen">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Latanoprost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Latanoprost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MedicationRelated -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MedicationRelated">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MoxifloxacinAbx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MoxifloxacinAbx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug"/>
+        <owl:disjointWith rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PolytrimAbx"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Netarsudil -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Netarsudil">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#NonUrgent2 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#NonUrgent2">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ClarifyInstructions"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DiscussResults"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ScheduleAppt"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationPharmacy"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEye"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ItchyEye"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MedicationRelated"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyDrug"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEyeDrug"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Reschedule"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Olapatadine -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Olapatadine">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PolytrimAbx -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PolytrimAbx">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Prednisolone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Prednisolone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCharacteristic"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RedEye -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RedEye">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MedicationRelated"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Reschedule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Reschedule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ScheduleAppt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Restasis -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Restasis">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEyeDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Rimexolone -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Rimexolone">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Schedule -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Schedule">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ScheduleAppt"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ScheduleAppt -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ScheduleAppt">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Shadow -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Shadow">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Drug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Swelling -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Swelling">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Symptom"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Tafluprost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Tafluprost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Task"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Timolol -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Timolol">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Travoprost -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Travoprost">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Urgent0 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Urgent0">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RedEye"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RetinalDetachmentSymptoms"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Urgent1 -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Urgent1">
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:intersectionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+                            </owl:Restriction>
+                        </owl:intersectionOf>
+                    </owl:Class>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug"/>
+                            </owl:Restriction>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Swelling"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Class>
+                        <owl:unionOf rdf:parseType="Collection">
+                            <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+                            <owl:Restriction>
+                                <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                                <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+                            </owl:Restriction>
+                        </owl:unionOf>
+                    </owl:Class>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyToMed"/>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <owl:equivalentClass>
+            <owl:Class>
+                <owl:intersectionOf rdf:parseType="Collection">
+                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationInsurance"/>
+                    </owl:Restriction>
+                    <owl:Restriction>
+                        <owl:onProperty rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mentions"/>
+                        <owl:someValuesFrom>
+                            <owl:Class>
+                                <owl:unionOf rdf:parseType="Collection">
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#GlaucomaDrug"/>
+                                    <rdf:Description rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+                                </owl:unionOf>
+                            </owl:Class>
+                        </owl:someValuesFrom>
+                    </owl:Restriction>
+                </owl:intersectionOf>
+            </owl:Class>
+        </owl:equivalentClass>
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PatientCall"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Xiidra -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Xiidra">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEyeDrug"/>
+    </owl:Class>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#acetazolamide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#acetazolamide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#allergic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#allergic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyToMed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#allergy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#allergy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AllergyToMed"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#almost_out -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#almost_out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#alphagan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#alphagan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brimonidine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#alternative -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#alternative">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+        <rdfs:comment>for example, if someone has an allergy or a drug is too expensive and needs an alternative drug prescribed</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#antibiotic -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#antibiotic">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AntibioticDrug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#artificial_tear -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#artificial_tear">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#avastin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#avastin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#azopt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#azopt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brinzolamide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#bimatoprost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#bimatoprost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bimatoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#bleed -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#bleed">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blood -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blood">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blur -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blur">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blurred -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blurred">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blurry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#blurry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#brimonidine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#brimonidine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brimonidine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#brinzolamide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#brinzolamide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Brinzolamide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#call_with_results -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#call_with_results">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DiscussResults"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#change_pharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#change_pharmacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationPharmacy"/>
+        <rdfs:comment>for example, the patient wants his current medication called into a different pharmacy</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#clarif -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#clarif">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ClarifyInstructions"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#completely_out -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#completely_out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#cyclosporine -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#cyclosporine">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Restasis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dexamethasone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dexamethasone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dexamethasone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#diamox -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#diamox">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#discuss_results -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#discuss_results">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DiscussResults"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dozolamide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dozolamide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dorzolamide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dry -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#dry">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#DryEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#durezol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#durezol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Difluprednate"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#erg -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#erg">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#eylea -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#eylea">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fax -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fax">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#flash -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#flash">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Flashes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#floater -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#floater">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Floaters"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fluorometholone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fluorometholone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Fluorometholone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fml -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#fml">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Fluorometholone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#form -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#form">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#haze -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#haze">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hazy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hazy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#BlurredVision"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hemorrhage -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hemorrhage">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bleeding"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hurt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hurt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hvf -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#hvf">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#injection -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#injection">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#insurance -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#insurance">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationInsurance"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#itchy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#itchy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ItchyEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ketotifen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ketotifen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Ketotifen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#last_appointment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#last_appointment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#last_appt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#last_appt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#latanoprost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#latanoprost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Latanoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lifitegrast -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lifitegrast">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Xiidra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lightning -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lightning">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Flashes"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lucentis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lucentis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentInjection"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lumigan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#lumigan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Bimatoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mail -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mail">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#methazolamide -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#methazolamide">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#moxifloxacin -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#moxifloxacin">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#MoxifloxacinAbx"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mri -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#mri">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#neptazane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#neptazane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#OralGlaucomaDrugs"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pain -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pain">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#painful -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#painful">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#paperwork -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#paperwork">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pataday -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pataday">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Olapatadine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#patanol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#patanol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Olapatadine"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pharmacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationPharmacy"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#polytrim -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#polytrim">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PolytrimAbx"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#postop -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#postop">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pred_forte -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#pred_forte">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Prednisolone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prednisolone -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prednisolone">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Prednisolone"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prescrib -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prescrib">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prescription -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prescription">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prior_auth -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#prior_auth">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#recent_appointment -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#recent_appointment">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#recent_appt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#recent_appt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentAppt"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#records -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#records">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ProcessDocuments"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#red -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#red">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RedEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#refill -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#refill">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#refresh -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#refresh">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#reorder -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#reorder">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#reschedul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#reschedul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Reschedule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#restasis -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#restasis">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Restasis"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#rhopressa -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#rhopressa">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Netarsudil"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#run_out -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#run_out">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#rx -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#rx">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedication"/>
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RefillMedication"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#schedul -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#schedul">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Schedule"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#scratchy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#scratchy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ItchyEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#shadow -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#shadow">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Shadow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#sore -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#sore">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#PainfulEye"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#steroid -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#steroid">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#SteroidDrug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply"/>
+        <rdfs:comment>for example, to change from 30-day supply to 90-day supply</rdfs:comment>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#surgery -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#surgery">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#swelling -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#swelling">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Swelling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#swollen -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#swollen">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Swelling"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#systane -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#systane">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ArtificialTearDrug"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#tafluprost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#tafluprost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Tafluprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#timolol -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#timolol">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Timolol"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#trabeculectomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#trabeculectomy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#travatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#travatan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Travoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#travoprost -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#travoprost">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Travoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#trusopt -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#trusopt">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Dorzolamide"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#veil -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#veil">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Shadow"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#visual_field -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#visual_field">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Testing"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#vitrectomy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#vitrectomy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#RecentSurgery"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#waiting_at_pharmacy -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#waiting_at_pharmacy">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#AlmostOutOfMeds"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#xalatan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#xalatan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Latanoprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#xiidra -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#xiidra">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Xiidra"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#zaditor -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#zaditor">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Ketotifen"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#zioptan -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#zioptan">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#Tafluprost"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90_day_supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90_day_supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90day_supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90day_supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply"/>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90-day_supply -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#90-day_supply">
+        <rdf:type rdf:resource="http://www.semanticweb.org/sophia/ontologies/2020/1/ophthalmologytelephonetriage#ChangeMedicationSupply"/>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.9.2019-02-01T07:24:44Z) https://github.com/owlcs/owlapi -->
+
