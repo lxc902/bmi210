@@ -133,13 +133,13 @@ class TranscriptTextArea extends Component {
         loadingBar.style.display = "none";
 
         // Display human-readable result on the UI
-        if (classification.indexOf('0') != -1) {
+        if (classification.indexOf('0') !== -1) {
           classification = "<b>Urgent</b> (should be addressed ASAP, within 0 days)";
-        } else if (classification.indexOf('1') != -1) {
+        } else if (classification.indexOf('1') !== -1) {
           classification = "<b>Semi-Urgent</b> (should ideally be addressed within 1 day)";
-        } else if (classification.indexOf('2') != -1) {
+        } else if (classification.indexOf('2') !== -1) {
           classification = "<b>Non-Urgent</b> (can wait to be addressed for 2 or more days)";
-        } else if (classification.indexOf("Unclassified") != -1) {
+        } else if (classification.indexOf("Unclassified") !== -1) {
           classification = "<b>Unclassifed</b> (could not determine urgency of this transcript)"
         }
         classificationResultText.innerHTML = "Result: " + classification;
