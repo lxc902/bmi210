@@ -1,4 +1,4 @@
-# bmi210 Final Project: Classify Medical Urgency of Patient Notes
+# BMI210 Final Project: Automatic Triaging of Opthalmology Patient Phone Calls
 ## Running the Web App
 To start the local server, do the following:
 
