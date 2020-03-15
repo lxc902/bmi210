@@ -31,6 +31,7 @@ class TranscriptTextArea extends Component {
           <FormLabel component="legend">Please select the classifier you would like to use:</FormLabel>
           <RadioGroup value={this.state.selectedClassifier} name="classifierGroup" onChange={this.handleChange}>
             <FormControlLabel value={global.NAIVE_ONTOLOGY} control={<Radio />} label="Naive OWL Ontology" />
+            <FormControlLabel value={global.UPDATED_ONTOLOGY} control={<Radio />} label="Updated OWL Ontology" />
             <FormControlLabel value={global.SUPPORT_VECTOR_MACHINE} control={<Radio />} label="Support Vector Machine" />
             <FormControlLabel value={global.GAUSSIAN_NAIVE_BAYES} control={<Radio />} label="Gaussian Naive Bayes" />
             <FormControlLabel value={global.LOGISTIC_REGRESSION} control={<Radio />} label="word2vec + Logistic Regression" />

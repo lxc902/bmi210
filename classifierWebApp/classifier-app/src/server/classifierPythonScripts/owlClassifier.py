@@ -7,7 +7,8 @@ import os
 # For Parameter Loading
 import sys
 
-ONTOLOGY_PATH = "ophthalmologytelephonetriage3-1.owl"
+NAIVE_ONTOLOGY_PATH = "ophthalmologytelephonetriage3-1.owl"
+UPDATED_ONTOLOGY_PATH = "ophthalmologytelephonetriage4.owl"
 SAVED_ONTOLOGY_PATH = "result.owl"
 JSON_OUTPUT_PATH = "output.json"
 N = 3
@@ -15,8 +16,11 @@ URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 def main():
     # Load the ontology.
+    shouldUseUpdatedOntology = (len(sys.argv) > 2 and sys.argv[2] == "updated")
     fileDir = os.path.dirname(os.path.realpath('__file__'))
-    filename = os.path.join(fileDir, 'classifierPythonScripts/' + ONTOLOGY_PATH)
+    filename = os.path.join(fileDir, 'classifierPythonScripts/' + NAIVE_ONTOLOGY_PATH)
+    if shouldUseUpdatedOntology:
+        filename = os.path.join(fileDir, 'classifierPythonScripts/' + UPDATED_ONTOLOGY_PATH)
     onto = get_ontology("file://" + filename).load()
 
     # Map the name of each instance in the ontology to its corresponding

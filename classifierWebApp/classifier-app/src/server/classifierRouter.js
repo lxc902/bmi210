@@ -2,6 +2,7 @@ var express = require('express');
 var router = express.Router();
 
 let runNaiveOntologyClassifier = require('./classifierRouterHelperModules/runNaiveOntology.js');
+let runUpdatedOntologyClassifier = require('./classifierRouterHelperModules/runUpdatedOntology.js');
 let runSVMClassifier = require('./classifierRouterHelperModules/runSupportVectorMachine.js');
 let runGNBClassifier = require('./classifierRouterHelperModules/runGaussianNaiveBayes.js');
 let runLogisticRegressionClassifier = require('./classifierRouterHelperModules/runWord2VecLogisticRegression.js');
@@ -21,6 +22,9 @@ router.get('/classifer', async (req, res) => {
   switch (selectedClassifier) {
     case global.NAIVE_ONTOLOGY:
       runNaiveOntologyClassifier(transcript, res);
+      break;
+    case global.UPDATED_ONTOLOGY:
+      runUpdatedOntologyClassifier(transcript, res);
       break;
     case global.SUPPORT_VECTOR_MACHINE:
       runSVMClassifier(transcript, res);
