@@ -32,3 +32,10 @@ To run the Owlready2 python script independent of the web app, do the following:
         b. By default, the above command will not assign any classifications to those patient notes that cannot be automatically 
            classified. To assign a default classification of either Urgent or Non-Urgent to transcripts unable to be classified, 
            you may set one of the "SHOULD_SET_NAN_TO_0" or "SHOULD_SET_NAN_TO_2" booleans, respectively, to True. 
+
+## Running/Retrain the word2vec models,
+    0. go to the word2vec_csv/ folder
+    1. (optional) modify the `obj/tokenizer_whitelisted_words.txt`
+    2. run `python3 csv_classifier.py`
+    3. copy/override everything under `obj/` over to `bmi210/classifierWebApp/classifier-app/src/server/classifierPythonScripts/word2vec_app/obj/`
+    4. restart the web app following instructions in https://github.com/lxc902/bmi210/blob/master/classifierWebApp/readme
