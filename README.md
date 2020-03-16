@@ -1,4 +1,10 @@
 # BMI210 Final Project: Automatic Triaging of Opthalmology Patient Phone Calls
+
+## Viewing Our Ontologies
+To view the ontologies created for this project, open the following files in Protege:
+    1. ophthalmologytelephonetriage3-1.owl (the Naive Ontology)
+    2. ophthalmologytelephonetriage4.owl (the Updated Ontology)
+
 ## Running the Web App
 To start the local server, do the following:
 
