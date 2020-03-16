@@ -25,6 +25,10 @@ To get it to work, you may need to do the following installations:
     4. npm install python-shell
     5. npm install typeface-roboto --save
     6. pip install --upgrade gensim
+    
+Below is a demo of the web app in action:
+
+[![](http://img.youtube.com/vi/2uIzoLlQzGY/0.jpg)](http://www.youtube.com/watch?v=2uIzoLlQzGY "Web App Demo")
 
 ## Running the OWL Ontology Script
 Unfortunately, the OWL Ontology Script cannot be run independent of the web app without access to the patient notes csv file, 
