@@ -32,7 +32,7 @@ Below is a demo of the web app in action:
 
 ## Running the OWL Ontology Script
 Unfortunately, the OWL Ontology Script cannot be run independent of the web app without access to the patient notes csv file, 
-which we are unable to upload to this Github due to patient privacy. However, if one did have access to this file, these instructions 
+which we are unable to upload to this Github repo due to patient privacy. However, if one did have access to this file, these instructions 
 specify how to run the script.
 
 To run the Owlready2 python script independent of the web app, do the following:
@@ -44,7 +44,7 @@ To run the Owlready2 python script independent of the web app, do the following:
            classified. To assign a default classification of either Urgent or Non-Urgent to transcripts unable to be classified, 
            you may set one of the "SHOULD_SET_NAN_TO_0" or "SHOULD_SET_NAN_TO_2" booleans, respectively, to True. 
 
-## Running/Retrain the word2vec models,
+## Running/Retraining the word2vec models,
     0. go to the word2vec_csv/ folder
     1. (optional) modify the `obj/tokenizer_whitelisted_words.txt`
     2. run `python3 csv_classifier.py`
