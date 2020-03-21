@@ -4,7 +4,8 @@ import re
 from projectevalstats import *
 import math
 
-ONTOLOGY_PATH = "../ophthalmologytelephonetriage3-1.owl"
+NAIVE_ONTOLOGY_PATH = "ophthalmologytelephonetriage3-1.owl"
+UPDATED_ONTOLOGY_PATH = "ophthalmologytelephonetriage4.owl" 
 SAVED_ONTOLOGY_PATH = "result.owl"
 OUTPUT_CSV_PATH = "result.csv"
 PATIENT_CALLS_PATH = "../telephonetriage.csv"
@@ -13,11 +14,11 @@ URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 # Boolean constants for how to deal with unclassified transcripts
 SHOULD_SET_NAN_TO_0 = False # set to True to classify unclassified as Urgent0
-SHOULD_SET_NAN_TO_2 = False # set to True to classify unclassified as NonUrgent2
+SHOULD_SET_NAN_TO_2 = True # set to True to classify unclassified as NonUrgent2
 
 def main():
 	# Load the ontology.
-	onto = get_ontology("file://" + ONTOLOGY_PATH).load()
+	onto = get_ontology("file://" + UPDATED_ONTOLOGY_PATH).load()
 
 	# Map the name of each instance in the ontology to its corresponding
 	# instance object.

@@ -11,14 +11,30 @@ from tokenizer import *
 cur_dir = os.getcwd()
 data_path = cur_dir + '/telephonetriage.csv'
 
+def union2(dict1, dict2):
+  from collections import Counter 
+  return Counter(dict1) + Counter(dict2)
+
 def main():
-  c = WVConverter()
   allData = read_csv_to_array(data_path)
   allNotes = allData['notelower'].tolist()
   vocab = set()
+  #vocab = dict() # for Print3 below
   for note in allNotes:
     vocab = vocab.union(tokenize(note))
+    #vocab = dict(union2(vocab, tokenize(note, weights=True))) # for Print3 below
   #print(len(vocab)) # 6797
+
+  c = WVConverter()
+
+  ## Print3 out non-vocab words
+  #x = []
+  #for w in vocab:
+  #  if not c.in_vocab(w):
+  #    x += [(w, vocab[w])]
+  #x.sort(key=lambda y: -y[1])
+  #[print(y) for y in x]
+  #sys.exit(0) # Print3
 
   vocab = [w for w in vocab if c.in_vocab(w)]
   # print(len(vocab)) # 5120

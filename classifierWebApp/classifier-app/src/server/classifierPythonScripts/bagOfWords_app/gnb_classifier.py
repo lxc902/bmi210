@@ -13,6 +13,7 @@ import warnings
 import json
 import sys
 import re
+import pathlib
 
 # Regular Expressions
 phoneREs = [
@@ -43,7 +44,7 @@ wordREs = [
 ]
 
 otherREs = [
-'crm', 
+'crm',
 '\d\d\d\d\d\d\d',
 '[\d+]',
 '-----',
@@ -63,7 +64,7 @@ def trim_notes(notes):
 		remove crm codes
 	Not complete -- Needs more RegExes to get more informative words
 	'''
-	
+
 	new_notes = []
 	for note in notes:
 		new_note = note.split()
@@ -71,25 +72,25 @@ def trim_notes(notes):
 			for RE in RElist:
 				pattern = re.compile(RE)
 				new_note = [i for i in new_note if not re.match(pattern, i)]
-		
+
 		for i, word in enumerate(new_note):
 			if word == "pt":
 				new_note[i] = "patient"
 			parens = re.compile(r'\(.*\)$')
 			if re.match(parens, word):
 				new_note[i] = ''.join(c for c in word if c not in ['(',')'])
-		new_notes.append(' '.join(new_note))	
+		new_notes.append(' '.join(new_note))
 	return new_notes
 
 # Vocabulary for embeddings
 vocab = ['itchy', 'dry', 'allergy', 'ketotifen', 'olapatadine',
  'antibiotic', 'glaucoma', 'steroid', 'surgery', 'pain', 'painful', 'red',
- 'flashes', 'float', 'floater', 'flash', 'swelling', 'fax', 'rx', 'contact', 
- 'prescription', 'information', 'pharmacy', 'history', 'today', 'nurse', 'self', 
- 'seen', 'subject', 'needs', 'vision', 'unresolved', 'scheduled', 'appointment', 
- 'appt', 'new', 'informed', 'past', 'eyes', 'wants', 'has', 'do', 'said', 'may', 
- 'take', 'questions', 'question', 'about', 'still', 'reasons', 'did', 'ok', 
- 'receive', 'order', 'one', 'next', 'back', 'use', 'drop', 'unable', 'come', 
+ 'flashes', 'float', 'floater', 'flash', 'swelling', 'fax', 'rx', 'contact',
+ 'prescription', 'information', 'pharmacy', 'history', 'today', 'nurse', 'self',
+ 'seen', 'subject', 'needs', 'vision', 'unresolved', 'scheduled', 'appointment',
+ 'appt', 'new', 'informed', 'past', 'eyes', 'wants', 'has', 'do', 'said', 'may',
+ 'take', 'questions', 'question', 'about', 'still', 'reasons', 'did', 'ok',
+ 'receive', 'order', 'one', 'next', 'back', 'use', 'drop', 'unable', 'come',
  'complaint', 'doctor', 'urgent', 'not', 'data', 'compliment', 'thank', 'eye']
 
 
@@ -97,7 +98,7 @@ JSON_OUTPUT_PATH = "output.json"
 URGENCY_CLASSES = ["Urgent0", "Urgent1", "NonUrgent2"]
 
 # Unpickle models
-gnb_filename = os.getcwd() + "/src/server/classifierPythonScripts/bagOfWords_app/" + "pickled_GNB.pkl"
+gnb_filename = os.getcwd() + "/classifierPythonScripts/bagOfWords_app/" + "pickled_GNB.pkl"
 with open(gnb_filename, 'rb') as file:
 	gnb = pickle.load(file)
 
@@ -120,8 +121,8 @@ def tokenize_note(note, vocab):
 # Get note line
 
 def writeClassificationToJsonFile(classification, keywords):
-    fileDir = os.path.dirname(os.path.realpath('__file__'))
-    filename = os.path.join(fileDir, 'src/server/classifierPythonScripts/bagOfWords_app/' + JSON_OUTPUT_PATH)
+    fileDir = str(pathlib.Path(__file__).parent.absolute()) + '/'
+    filename = os.path.join(fileDir, JSON_OUTPUT_PATH)
     outFile = open(filename, "w")
     outputJSON = json.loads("{}")
     outputJSON["classification"] = classification
