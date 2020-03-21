@@ -136,12 +136,12 @@ def main():
 	transcript_vec = tokenize_note(trimmed_transcript, vocab)
 	# print (transcript_vec)
 	rating = gnb.predict([transcript_vec])[0]
-	# print ("Rating is: {}".format(rating))
+	print ("Rating is: {}".format(URGENCY_CLASSES[rating]))
 	used_words = []
 	for i in range(len(transcript_vec)):
 		if transcript_vec[i] != 0:
 			used_words.append(vocab[i])
-	# print ("Words used: {}".format(used_words))
+	print ("Words used: {}".format(used_words))
 	# Write JSON file
 	writeClassificationToJsonFile([URGENCY_CLASSES[rating]], used_words)
 
