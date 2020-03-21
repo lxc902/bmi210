@@ -54,4 +54,4 @@ To run the Owlready2 python script independent of the web app, do the following:
 ## Running the BagOfWords models (SVM and GNB),
     0. go to the classifierWebApp/classifier-app/src/server/classifierPythonScripts/bagOfWords_app folder
     1. run `python3 svm_classifier.py <Note>` or `python3 gnb_classifier.py <Note>` with <Note> replaced with your desired note to calssify in quotes
-    3. Output should be the classification as well as the words that were used to make the classification.
+    2. Output should be the classification as well as the words that were used to make the classification.
