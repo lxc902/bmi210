@@ -50,3 +50,8 @@ To run the Owlready2 python script independent of the web app, do the following:
     2. run `python3 csv_classifier.py`
     3. copy/override everything under `obj/` over to `bmi210/classifierWebApp/classifier-app/src/server/classifierPythonScripts/word2vec_app/obj/`
     4. restart the web app following instructions in https://github.com/lxc902/bmi210/blob/master/classifierWebApp/readme
+
+## Running the BagOfWords models (SVM and GNB),
+    0. go to the classifierWebApp/classifier-app/src/server/classifierPythonScripts/bagOfWords_app folder
+    1. run `python3 svm_classifier.py <Note>` or `python3 gnb_classifier.py <Note>` with <Note> replaced with your desired note to calssify in quotes
+    3. Output should be the classification as well as the words that were used to make the classification.
